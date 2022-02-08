@@ -1,4 +1,5 @@
 FROM nvidia/cuda:11.6.0-runtime-ubuntu20.04
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 ARG DEBIAN_FRONTEND=noninteractive
 
 
@@ -6,6 +7,7 @@ RUN apt update && apt install -y \
     gnupg \
     lsb-release \
     curl \
+    neko \
     && rm -rf /var/lib/apt/lists/*
 
 ######################## INSTALLING ROS

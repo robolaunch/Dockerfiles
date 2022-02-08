@@ -7,6 +7,7 @@ RUN apt update && apt install -y \
     lsb-release \
     curl \
     wget \
+    neko \
     && rm -rf /var/lib/apt/lists/*
 
 ######################## INSTALLING ROS
