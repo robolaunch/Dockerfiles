@@ -16,7 +16,7 @@ RUN apt install -y ros-foxy-ros-base
 RUN echo "source /opt/ros/foxy/setup.bash" >> ~/.bashrc
 RUN apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 
-RUN apt install -y ros-foxy-rviz
+RUN apt install -y ros-foxy-rviz2
 RUN apt install -y ros-foxy-rqt
 
 CMD ["bash"]

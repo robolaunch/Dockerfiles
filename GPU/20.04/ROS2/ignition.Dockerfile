@@ -19,4 +19,9 @@ RUN apt install -y python3-rosdep python3-rosinstall python3-rosinstall-generato
 RUN apt install -y ros-foxy-rviz2
 RUN apt install -y ros-foxy-rqt
 
+RUN wget https://packages.osrfoundation.org/gazebo.gpg -O /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
+RUN apt-get update
+RUN apt-get -y install ignition-fortress
+
 CMD ["bash"]
