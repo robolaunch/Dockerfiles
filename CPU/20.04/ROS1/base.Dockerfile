@@ -14,6 +14,7 @@ RUN curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | apt
 
 RUN apt update && apt install -y ros-noetic-ros-base
 
+
 RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
 RUN apt update && apt install -y \
     python3-rosdep \
