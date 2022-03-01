@@ -32,15 +32,4 @@ RUN apt update && apt install -y \
     ros-foxy-ros1-bridge \
     && rm -rf /var/lib/apt/lists/*
 
-
-#RUN echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
-#RUN apt update && apt install -y \
-#    python3-rosdep \
-#    python3-rosinstall \
-#    python3-rosinstall-generator \
-#    python3-wstool \
-#    build-essential \
-#    && rm -rf /var/lib/apt/lists/*
-
-
 CMD ["bash"]
