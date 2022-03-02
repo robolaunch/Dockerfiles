@@ -36,5 +36,5 @@ WORKDIR /
 RUN git clone https://github.com/robolaunch/ros-tracker.git
 WORKDIR /ros-tracker
 
-RUN pip3 install -r requirements
+RUN pip3 install -r requirements.txt
 CMD ["bash"]
