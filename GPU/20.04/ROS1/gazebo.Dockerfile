@@ -29,5 +29,4 @@ RUN apt update && apt install -y \
     ros-noetic-gazebo-ros-control \
     && rm -rf /var/lib/apt/lists/*
 
-
 CMD ["bash"]
