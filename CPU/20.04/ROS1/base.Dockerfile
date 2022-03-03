@@ -6,6 +6,7 @@ RUN apt update && apt install -y \
     gnupg \
     lsb-release \
     curl \
+    ssh \
     && rm -rf /var/lib/apt/lists/*
 
 ######################## INSTALLING ROS1

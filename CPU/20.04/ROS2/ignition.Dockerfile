@@ -8,6 +8,7 @@ RUN apt update && apt install -y \
     curl \
     wget \
     neko \
+    ssh \
     && rm -rf /var/lib/apt/lists/*
 
 ######################## INSTALLING ROS

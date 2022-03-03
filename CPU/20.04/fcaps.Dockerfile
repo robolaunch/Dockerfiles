@@ -21,6 +21,7 @@ RUN apt update && apt install -y \
     python3-rosinstall-generator \
     python3-wstool \
     build-essential \
+    ssh \
     && rm -rf /var/lib/apt/lists/*
 
 ######################## INSTALLING ROS1

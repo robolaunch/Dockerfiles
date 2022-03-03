@@ -5,6 +5,7 @@ RUN apt update && apt install -y \
     gnupg2 \
     lsb-release \
     curl \
+    ssh \
     && rm -rf /var/lib/apt/lists/*
 
 ######################## INSTALLING ROS
