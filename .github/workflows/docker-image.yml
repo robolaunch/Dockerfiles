@@ -144,6 +144,16 @@ jobs:
         cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/noetic-foxy-fcaps:buildcache
         cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/noetic-foxy-fcaps:buildcache,mode=max
     
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build . --file GPU/20.04/gazebo.Dockerfile --tag robolaunch:ros-base
+    
+    - name: Login to Docker Hub
+      uses: docker/login-action@v1
+      with:
+        username: ${{ secrets.DOCKER_HUB_USERNAME }}
+        password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
     - name: Set up Docker Buildx
       id: buildx4
       uses: docker/setup-buildx-action@v1
